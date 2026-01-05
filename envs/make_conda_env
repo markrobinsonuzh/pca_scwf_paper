@@ -1,8 +1,9 @@
 conda create -n spca python=3.12.3
 conda activate spca
 #conda install scanpy==1.9.1 anndata==0.8.0
-conda install anndata==0.8.0
-conda install -c conda-forge scanpy=1.9.1 python-igraph leidenalg
+#conda install anndata==0.8.0
+#conda install -c conda-forge scanpy=1.9.1 python-igraph leidenalg
+conda install -c conda-forge anndata scanpy python-igraph leidenalg
 
 #conda remove -n spca --all
 
