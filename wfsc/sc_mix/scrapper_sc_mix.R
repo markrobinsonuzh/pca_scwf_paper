@@ -9,6 +9,8 @@ library(bluster)
 library(scrapper)
 library(DelayedArray)
 
+nthreads <- parallel::detectCores()-2
+
 # save time usage ####
 time <- matrix(NA, 10, 1)
 colnames(time) <- c("time_sec")
@@ -16,7 +18,8 @@ rownames(time) <- c("find_mit_gene", "filter", "normalization", "hvg",
                     "scaling", "PCA", "t-sne", "umap", "louvain", "leiden")
 
 #### data ####
-load("/mnt/spca/pipeline_sc/sc_mix.RData")
+# load("/mnt/spca/pipeline_sc/sc_mix.RData")
+load("sc_mix.RData")
 sce <- sce_sc_10x_5cl_qc
 table(sce$cell_line)
 assay(sce) <- DelayedArray(assay(sce))

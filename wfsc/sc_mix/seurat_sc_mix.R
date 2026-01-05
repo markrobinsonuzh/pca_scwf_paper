@@ -16,7 +16,8 @@ rownames(time) <- c("find_mit_gene", "filter", "normalization", "hvg",
 
 
 # data ####
-load("/mnt/spca/pipeline_sc/sc_mix.RData")
+# load("/mnt/spca/pipeline_sc/sc_mix.RData")
+load("sc_mix.RData")
 sce <- sce_sc_10x_5cl_qc
 data <- as.Seurat(sce, counts = "counts", data = NULL, assay = NULL)
 data
