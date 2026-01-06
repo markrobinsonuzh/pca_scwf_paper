@@ -4,6 +4,7 @@ conda activate spca
 #conda install anndata==0.8.0
 #conda install -c conda-forge scanpy=1.9.1 python-igraph leidenalg
 conda install -c conda-forge anndata scanpy python-igraph leidenalg openpyxl
+pip install louvain
 
 
 #conda remove -n spca --all

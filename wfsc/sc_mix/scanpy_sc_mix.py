@@ -137,33 +137,33 @@ print("Time Elapsed:", time_elapsed)
 time_sc.iloc[7, 0] = time_elapsed
 
 # louvain ####
-#start_time = time.time()
+start_time = time.time()
 
-#sc.tl.louvain(adata, resolution = 0.13)
+sc.tl.louvain(adata, resolution = 0.13)
 
-#end_time = time.time()
-#time_elapsed = end_time - start_time
-#print("Time Elapsed:", time_elapsed)
-#time_sc.iloc[8, 0] = time_elapsed
+end_time = time.time()
+time_elapsed = end_time - start_time
+print("Time Elapsed:", time_elapsed)
+time_sc.iloc[8, 0] = time_elapsed
 
-#true_labels = adata.obs['cell_line'].astype(str)
-#predicted_labels = adata.obs['louvain'].astype(str)
+true_labels = adata.obs['cell_line'].astype(str)
+predicted_labels = adata.obs['louvain'].astype(str)
 
 
 
 # Compute the ARI
-#ari_score = adjusted_rand_score(true_labels, predicted_labels)
+ari_score = adjusted_rand_score(true_labels, predicted_labels)
 
 # Print the ARI score
-#print("Adjusted Rand Index (ARI):", ari_score)
+print("Adjusted Rand Index (ARI):", ari_score)
 
-#cluster_labels = adata.obs['louvain']
+cluster_labels = adata.obs['louvain']
 
 # Calculate silhouette scores
-#silhouette_avg = silhouette_score(adata.X, cluster_labels)
+silhouette_avg = silhouette_score(adata.X, cluster_labels)
 
 # Print the average silhouette score
-#print("Average Silhouette Score:", silhouette_avg)
+print("Average Silhouette Score:", silhouette_avg)
 
 
 # leiden ####

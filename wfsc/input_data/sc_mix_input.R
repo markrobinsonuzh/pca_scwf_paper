@@ -28,6 +28,7 @@ out_path <- tempfile(pattern = ".h5ad")
 
 writeH5AD(sce_sc_10x_5cl_qc, file = "sc_mixolgy_10x_5cl.h5ad")
 
+# doesn't work on R 4.4 ..
 library(anndataR)
 x.ad <- as_AnnData(sce_sc_10x_5cl_qc)
 write_h5ad(x.ad, "sc_mixolgy_10x_5cl-anndataR.h5ad", 
